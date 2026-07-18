@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Total Earnings</h1>
+    <p id="shop1"></p>
+    <p id="shop2"></p>
+    <script>
+        let noofshirt=5;
+        let shirtprice=400;
+
+        let  noofcaps=3;
+         let capprice=150;
+
+       
+
+       document.getElementById("shop1").innerHTML= (noofshirt * shirtprice) + (noofcaps * capprice)
+
+       shirtprice=450;
+       
+       document.getElementById("shop2").innerHTML= (noofshirt * shirtprice) + (noofcaps * capprice)
+    </script>
+</body>
+</html>
