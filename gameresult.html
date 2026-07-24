@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="score">
+    <button onclick="gameresult()">Submit</button>
+    <p id="mystery"></p> -->
+
+    <script>
+        // let mysteryLevel=Math.floor(Math.random()*50)+1;
+        // document.getElementById("mystery").innerHTML= "Mysterylevel :"+ " " +mysteryLevel
+
+        // function gameresult(){
+        //     let userscore=document.getElementById("score").value;
+        //     let convertedScore=Number(userscore);
+            
+
+        // }
+
+        let mysteryValue=Math.floor(Math.random()*50)+1;
+        console.log( "Mystery value ="+" "+ mysteryValue);
+
+        let userscore="45";
+        console.log(typeof(userscore));
+
+        let convert=Number(userscore);
+        console.log(typeof(convert));
+
+        let difference=Math.abs(mysteryValue-convert);
+        console.log("Absolute difference ="+" "+ difference)
+
+        let sqrt=Math.sqrt(convert);
+        console.log( "Square roo tof user score ="+" "+ sqrt);
+
+        let pie=Math.PI;
+        console.log("Value of pie ="+" "+ pie);
+
+        let implict="20"*5;
+        console.log("String multiplication ="+" "+ implict);
+
+        let max=Math.max(10,20,mysteryValue);
+        console.log( "Maximum value ="+" "+ max);
+
+        let min=Math.min(10,20,mysteryValue);
+        console.log("Minimum value ="+" "+ min);
+
+    </script>
+
+</body>
+</html>
