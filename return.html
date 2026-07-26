@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="showdetails()">Check</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        let details={
+            itemName:"shoe", 
+            isDelivered:true, 
+            daysSinceDelivery:4 
+        };
+
+        function showdetails(){
+            console.log(1);
+            let check=(details.isDelivered && details.daysSinceDelivery<=7) ? "Eligible for Return" : "Return Period Expired";
+            document.getElementById("demo").innerHTML=check;
+
+            let checkitemname= "itemName" in details;
+            document.getElementById("demo1").innerHTML=checkitemname;
+
+            delete details.daysSinceDelivery;
+        }
+    </script>
+</body>
+</html>
