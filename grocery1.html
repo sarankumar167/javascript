@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products = ["wheat", "rice", "sugar"];
+let prices = [50, 30, 70];
+
+
+let productList = products.map(function(product, index) {
+    return "Product: " + product + " - Price: " + prices[index];
+});
+
+console.log(productList);
+
+
+for (let i = 0; i < productList.length; i++) {
+    console.log(productList[i]);
+}
+
+
+let filteredProducts = products.filter(function(product, index) {
+    return prices[index] > 50;
+});
+
+console.log(filteredProducts);
+
+
+products.push("Watermelon");
+prices.push(80);
+
+let updatedList = products.map(function(product, index) {
+    return "Product: " + product + " - Price: " + prices[index];
+});
+
+console.log(updatedList);
+    </script>
+</body>
+</html>

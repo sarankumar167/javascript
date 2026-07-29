@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="date"><br>
+    <button onclick="showDetails()">Show</button>
+    <p id="result"></p>
+    <script>
+        function showDetails(){
+            let userDate=document.getElementById("date").value
+            console.log(userDate);
+            let dat=new Date(userDate);
+            console.log(dat);
+
+            let day=dat.getDate()
+            months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            let month=months[dat.getMonth()];
+            let year=dat.getFullYear();
+            let today=new Date();
+            let yearPassed=today.getFullYear()-year;
+            let check=(yearPassed > 1) ? "It has been more than a year since that date." : "It has been less than a year since that date";
+
+            console.log("Day: " + day);
+            console.log("Month: " + month);
+            console.log("Year :" + year);
+            console.log("Yearspassed: " + yearPassed);
+
+             
+            document.getElementById("result").innerHTML=check;
+        }
+
+    </script>
+</body>
+</html>

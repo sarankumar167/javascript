@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let friend={
+            name:"albert",
+            birthDate:"2002-07-05"
+        };
+
+        function getBirthdayDetails(birth){
+           let dat=new Date(birth.birthDate);
+           let year=dat.getFullYear();
+           
+ months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+           let month=months[dat.getMonth()];
+           let day=dat.getDate();
+           let today=new Date();
+           let currentYear=today.getFullYear();
+           let age=currentYear-year;
+             console.log(birth.name + "was born on " + day + " " + month + ", " + year + "  and is " + age + " years old ");
+        }
+
+        getBirthdayDetails(friend);
+       
+    </script>
+</body>
+</html>
