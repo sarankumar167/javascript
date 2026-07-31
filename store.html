@@ -6,53 +6,52 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="demo1"></p>
+    <p id="demo4"></p>
     <script>
-        let i;
-        for(  i =0; i<5 ;   i++) {
+       let count=0;
 
-            let code= Number(prompt("Enter product code:"));
+       while(count < 5){
+        let code = Number(prompt("Enter Product Code"));
+        let quantity = Number(prompt("Enter Quantity"));
 
-            if(code<1 || code>3){
-                console.log("invalid product code");
-                continue;
-            }
+        if( code < 1 || code > 3){
+            document.getElementById("demo1").innerHTML="Invalid input code";
+            continue;
+        }
 
-            let quantity=Number(prompt("Enter quantity:"));
+        let product;
+        let price;
+        let total;
+        switch(code){
+            case 1:
+                product="Apple";
+                price=30;
+                break;
 
+                case 2:
+                product="Banana";
+                price=10;
+                break;
 
-            switch(code){
-                case 1:
-                    product="Apple";
-                    price=30;
-                    break;
-
-                    case 2:
-                        product="Banana";
-                        price=10;
-                        break;
-
-                        case 3:
-                            product="Mango";
-                            price=50;
-                            break;
-            }
-
-             let total = price * quantity;
-
-             console.log(`product: ${product}`);
-             console.log(`product ${total}`);
-
-             if(total > 100){
-                console.log("High purchase");}
-                else{
-                    console.log("Normal purchase");
-                }
-
-              
-             
-
+                case 3:
+                product="Mango";
+                price=50;
+                break;
+        }
+        
+                total = price * quantity;
+                
+            
+        if(total > 100){
+            document.getElementById("demo4").innerHTML+=`Product: ${product},Total: ${total},High Purchase <br>`;
 
         }
+        else{
+            document.getElementById("demo4").innerHTML+=`Product: ${product},Total: ${total},Normal Purchase <br>`;
+        }
+        count++;
+       }
     </script>
     
 </body>
