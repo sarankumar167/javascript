@@ -8,9 +8,22 @@
 <body>
     <script>
         let comment = "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great";
+        let check = (/bad|ugly|studid/ig);
+        console.log(check.test(comment));
 
         let newcomment = comment.replace(/bad|ugly|stupid/ig, "***");
         console.log(newcomment);
+
+        let count = /\d+/g;
+        console.log(newcomment.match(count));
+        let number = newcomment.match(count);
+        let len=number.length;
+        console.log(len);
+        let word = /\b[A-Z]/g;
+        let wordcount = comment.match(word);
+        console.log(wordcount.length);
+
+        console.log(`Contain Banned words: ${check.test(comment)}\nCleaned Comment:${newcomment}\nNumber Count:${len}\nCapitalized word Count:${wordcount.length}`);
     </script>
     
 </body>
