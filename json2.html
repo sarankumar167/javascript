@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const jsondata=`{
+        "name":"saran",
+        "email":"saran@gmail.com",
+        "feedback":"THANK YOU"
+        }`
+        let checkFeedback = () =>{
+            try{
+                const object = JSON.parse(jsondata);
+                const feedback = object.feedback;
+                const lowerFeedback = feedback.toLowerCase();
+
+                if(lowerFeedback.includes("thank")){
+                    console.log("Positive feedback receieved");
+                }
+                else{
+                    console.log("Feedback noted")
+                }
+
+            }
+            catch(err){
+                console.log(err.message);
+            }
+        }
+        checkFeedback();
+    </script>
+</body>
+</html>
