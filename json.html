@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const jsondata=`{
+            "name":"saran",
+            "email":"saran@gmail.com",
+            "message":"have anice day"
+        }`
+        let object;
+
+        let printMessage = ()=>{
+        try{
+             object =JSON.parse(jsondata);
+             console.log(`Message received from ${object.name}`);
+            
+
+        }
+        catch(err){
+            console.log(err.message);
+        }
+         
+    }
+    printMessage();
+        
+    </script>
+</body>
+</html>
